@@ -1,173 +1,104 @@
-/* Shared
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button {
-    border-radius: 100px;
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #93E5F6, #F0A7E9, #B1A7F0, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 5s ease infinite;
+	-moz-animation: Gradient 5s ease infinite;
+	animation: Gradient 5s ease infinite;
 }
 
-/* Sections
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.section {
-    padding: 8rem 0 7rem;
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.main {
+    border: 10px solid white;
+    margin: 100px;
+    padding: 100px;
+    /* width: 100%; */
+}
+
+
+h1,
+h6 {
+	font-family: 'Playfair Display', serif;
+    /* font-weight: 300; */
+    font-size: 300px;
+    line-height: 10px;
+	text-align: center;
+	/* position: absolute; */
+	/* top: 0%;
+	right: 0;
+	left: 0%; */
+}
+
+p{
+    font-family: 'Quicksand', sans-serif;
+    /* font-weight: 300; */
+    font-size: 37px;
+    line-height: 20px;
     text-align: center;
+    word-break: break-all;
+	/* position: absolute; */
+	/* top: 45%; */
+	/* right: 0;
+	left: 0%; */
 }
 
-.section-heading,
-.section-description {
-    margin-bottom: 1.2rem;
+
+ .typewriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .30em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
 }
 
-/* Hero
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.phones {
-    position: relative;
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-.phone {
-    position: relative;
-    max-width: 80%;
-    margin: 3rem auto -12rem;
-}
-
-.phone+.phone {
-    display: none;
-}
-
-/* Values
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
-    background-image: url('../images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
-    padding-bottom: 5rem;
-}
-
-.value-multiplier {
-    margin-bottom: .5rem;
-    color: #11DFC7;
-}
-
-.value-heading {
-    margin-bottom: .3rem;
-}
-
-.value-description {
-    opacity: .8;
-    font-weight: 300;
-}
-
-/* Help
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.get-help {
-    border-bottom: 1px solid #ddd;
-}
-
-/* Categories
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.categories {
-    background-image: url('../images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
-}
-
-.categories .section-description {
-    margin-bottom: 4rem;
-}
-
-/* Bigger than 550 */
-@media (min-width: 550px) {
-    .section {
-        padding: 12rem 0 11rem;
-    }
-
-    .hero {
-        padding-bottom: 12rem;
-        text-align: left;
-        height: 165px;
-    }
-
-    .phone {
-        position: absolute;
-        top: -7rem;
-        right: 3rem;
-        max-height: 362px;
-        z-index: 3;
-    }
-
-    .phone+.phone {
-        top: -6rem;
-        display: block;
-        max-width: 73.8%;
-        right: 0;
-        z-index: 2;
-        max-height: 338px;
-    }
-
-    .hero-heading {
-        font-size: 2.4rem;
-    }
-}
-
-/* Bigger than 750 */
-@media (min-width: 750px) {
-    .hero {
-        height: 190px;
-    }
-
-    .hero-heading {
-        font-size: 2.6rem;
-    }
-
-    .section {
-        padding: 14rem 0 15rem;
-    }
-
-    .hero {
-        padding: 16rem 0 14rem;
-    }
-
-    .section-description {
-        max-width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .phone {
-        top: -14rem;
-        right: 5rem;
-        max-height: 510px;
-    }
-
-    .phone+.phone {
-        top: -12rem;
-        max-height: 472px;
-    }
-
-    .categories {
-        padding: 15rem 0 8rem;
-    }
-}
-
-/* Bigger than 1000 */
-@media (min-width: 1000px) {
-    .section {
-        padding: 20rem 0 19rem;
-    }
-
-    .hero {
-        padding: 22rem 0;
-    }
-
-    .hero-heading {
-        font-size: 3.0rem;
-    }
-
-    .phone {
-        top: -16rem;
-        max-height: 615px;
-    }
-
-    .phone+.phone {
-        top: -14rem;
-        max-height: 570px;
-    }
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
 }
