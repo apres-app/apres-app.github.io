@@ -1,6 +1,6 @@
 body {
 	width: 100wh;
-	height: 90vh;
+	height: 100vh;
 	color: #fff;
 	background: linear-gradient(-45deg, #93E5F6, #F0A7E9, #B1A7F0, #23D5AB);
 	background-size: 400% 400%;
@@ -11,7 +11,7 @@ body {
 
 @-webkit-keyframes Gradient {
 	0% {
-		background-position: 0% 50%
+        background-position: 0% 50%
 	}
 	50% {
 		background-position: 100% 50%
@@ -47,18 +47,23 @@ body {
 
 .main {
     border: 10px solid white;
-    margin: 100px;
-    padding: 100px;
-    /* width: 100%; */
+    margin: 10%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    max-width:100%;
+    max-height:100%;
 }
 
 
 h1,
 h6 {
-	font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     /* font-weight: 300; */
-    font-size: 300px;
-    line-height: 10px;
+    /* font-size: 20em; */
+    font-size: 20vw;
+    line-height: 7vw;
 	text-align: center;
 	/* position: absolute; */
 	/* top: 0%;
@@ -68,37 +73,48 @@ h6 {
 
 p{
     font-family: 'Quicksand', sans-serif;
-    /* font-weight: 300; */
-    font-size: 37px;
-    line-height: 20px;
+    font-size: 2vw;
     text-align: center;
     word-break: break-all;
-	/* position: absolute; */
-	/* top: 45%; */
-	/* right: 0;
-	left: 0%; */
 }
 
 
+
+
+
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
+
+
+
+
+
  .typewriter{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .30em solid white; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(30, end),
-    blinking-cursor .5s step-end infinite;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .30em solid white; /* The typwriter cursor */
+    white-space: nowrap;
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(30, end),
+        blinking-cursor .5s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from { width: 0 }
+    to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blinking-cursor {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
+    from, to { border-color: transparent }
+    50% { border-color: white; }
 }
